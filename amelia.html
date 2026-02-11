@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Amelia 💗</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background:linear-gradient(135deg,#ffb6d9,#ffd6eb,#ffffff);
+}
+
+/* Slide */
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    transition:1s;
+}
+
+/* Slide pertama */
+#slide1 h1{
+    font-size:40px;
+    color:#ff2e86;
+}
+
+#slide1 h2{
+    font-size:24px;
+    color:#ff69b4;
+    margin-top:10px;
+}
+
+.subtitle{
+    font-size:14px;
+    color:#ff99bb;
+    margin-top:10px;
+}
+
+button{
+    margin-top:20px;
+    font-size:40px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.3);
+}
+
+/* Slide kedua */
+#slide2{
+    display:none;
+    background:url("kertas.png") no-repeat center center;
+    background-size:cover;
+    padding:60px 30px;
+}
+
+.letter-content{
+    max-width:400px;
+    color:#7a0033;
+    line-height:1.6;
+    font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Slide 1 -->
+<div class="slide" id="slide1">
+    <h1>Halo Sayaangku </h1>
+    <h2>Amelia Sasta Widyaningrum</h2>
+    <button onclick="openLetter()">🩷</button>
+    <div class="subtitle">klik love kalo kamu mencintaiku</div>
+</div>
+
+<!-- Slide 2 -->
+<div class="slide" id="slide2">
+    <div class="letter-content">
+        <h2>Happy Valentine 💕</h2>
+        <p>
+        Amelia...  
+        Kamu adalah alasan kenapa aku tersenyum setiap hari.  
+        Hadirmu membuat hidupku terasa lebih hangat dan penuh warna.  
+        Terima kasih sudah mencintaiku dan bertahan bersamaku.  
+        Aku berjanji akan selalu menjagamu. 💗  
+        I love you more than words can describe.
+        </p>
+    </div>
+</div>
+
+<audio id="music" loop>
+    <source src="valentine.mp3" type="audio/mp3">
+</audio>
+
+<script>
+function openLetter(){
+    document.getElementById("slide1").style.display="none";
+    document.getElementById("slide2").style.display="flex";
+    document.getElementById("music").play();
+}
+</script>
+
+</body>
+</html>
